@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>aCODEmia - Praticas</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="style/style.css">
+</head>
+<body>
+    <div>
+        <header>
+                <h1 class="logo"><i><<mark>aCODEmia</mark>></i></h1>
+            <nav>
+                <ul class="navLinks">
+                    <li><a href="index.html">Menu</a></li>
+                    <li><a href="alunos.html">Alunos</a></li>
+                    <li><a href="modalidades.html">Modalidades</a></li>
+                    <li><a href="praticas.html" style="color:grey">Praticas</a></li>
+                    <li><a href="relatorios.html">Relatórios</a></li>
+                </ul>
+            </nav>
+            <a class="sair" href="index.html"><button>Sair</button></a>
+        </header>
+        <main>
+            <div class="app">
+                <ul class="navLinks">
+                    <li><input oninput="mascaraCPF(this)" id="buscador-cpf-pratica" type="text" placeholder="CPF do aluno"></li>
+                    <li><input id="buscador-codigo-pratica" type="text" placeholder="Código da modalidade"></li>
+                    <li><a id="listar-pratica" title="listar todos se algum dos campos ao lado estiver vazio">Listar</a></li>
+                    <li><a id="incluir-pratica">Incluir</a></li>
+                    <li><a id="alterar-pratica">Alterar</a></li>
+                    <li><a id="excluir-pratica">Excluir</a></li>
+                </ul>
+            </div>
+            <div class="content-table">
+                <table class="content-table">
+                    <thead>
+                        <th>CPF do Aluno</th>
+                        <th>Modalidade</th>
+                        <th>Data</th>
+                        <th>Horário</th>
+                    </thead>
+                    <tbody>
+                    </tbody>
+                </table>
+            </div>
+        </main>
+    </div>
+</body>
+<script src="script/main.js"></script>
+</html>

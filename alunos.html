@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>aCODEmia - Alunos</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="style/style.css">
+</head>
+<body>
+    <div class="modalContainer" id="modal">
+        <div class="container" id="modal-conteudo">
+        </div>
+    </div>
+    <div>
+        <header>
+                <h1 class="logo"><i><<mark>aCODEmia</mark>></i></h1>
+            <nav>
+                <ul class="navLinks">
+                    <li><a href="index.html">Menu</a></li>
+                    <li><a href="alunos.html" style="color:grey">Alunos</a></li>
+                    <li><a href="modalidades.html">Modalidades</a></li>
+                    <li><a href="praticas.html">Praticas</a></li>
+                    <li><a href="relatorios.html">Relatórios</a></li>
+                </ul>
+            </nav>
+            <a class="sair" href="index.html"><button>Sair</button></a>
+        </header>
+        <main>
+            <div class="app">
+                <ul class="navLinks">
+                    <li><input oninput="mascaraCPF(this)" id="buscador-cpf" type="text" placeholder="Digite o CPF do aluno"></li>
+                    <li><a id="listar-aluno" title="listar todos se o campo ao lado estiver vazio" onclick="listarAlunos('listar-aluno');">Listar</a></li>
+                    <li><a id="incluir-aluno" onclick="abrirPopUp('incluir-aluno');">Incluir</a></li>
+                    <li><a id="alterar-aluno" onclick="abrirPopUp('alterar-aluno');">Alterar</a></li>
+                    <li><a id="excluir-aluno" onclick="abrirPopUp('excluir-aluno');">Excluir</a></li>
+                </ul>
+            </div>
+            <div class="content-table">
+                <table class="content-table">
+                    <thead>
+                        <tr>
+                            <th>CPF</th>
+                            <th>Nome</th>
+                            <th>Data de Nascimento</th>
+                            <th>Sexo</th>
+                            <th>Peso</th>
+                            <th>Altura</th>
+                            <th>E-mails</th>
+                            <th>Telefones</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>123.123.123-00</td>
+                            <td>Nome Ipsum Nom</td>
+                            <td>12/12/1234</td>
+                            <td>Masculino</td>
+                            <td>64.00kg</td>
+                            <td>1.70m</td>
+                            <td>aluno@aluno.ifsp.edu.br</td>
+                            <td>(12) 3456-7890</td>
+                        </tr>
+                        <tr>
+                            <td>123.123.123-00</td>
+                            <td>Nome Ipsum Nom</td>
+                            <td>12/12/1234</td>
+                            <td>Masculino</td>
+                            <td>64.00kg</td>
+                            <td>1.70m</td>
+                            <td>aluno@aluno.ifsp.edu.br</td>
+                            <td>(12) 3456-7890</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </main>
+    </div>
+</body>
+<script src="script/main.js"></script>
+</html>
