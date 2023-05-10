@@ -1,3 +1,5 @@
+import alunos.js
+
 let listaAlunos = []
 let listaModalidades = []
 let listaPraticas = []
