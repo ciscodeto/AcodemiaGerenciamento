@@ -1,5 +1,3 @@
-import alunos.js
-
 let listaAlunos = []
 let listaModalidades = []
 let listaPraticas = []
@@ -88,6 +86,7 @@ function incluirAluno() {
         }
     }
     //Adicionar 'novoAluno' ao vetor de alunos
+    listaAlunos = listaAlunos.append(novoAluno)
     fecharPopUp()
 }
 
@@ -121,7 +120,8 @@ function abrirPopUp(id) {
 }
 
 function listarAlunos(id, listAlu) {
-    if (elena) {
+    let cpf = document.getElementById('buscador-cpf').value
+    if (cpf) {
         
     } else {
         abrirPopUp(id)
