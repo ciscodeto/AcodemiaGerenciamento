@@ -9,6 +9,10 @@
     <link rel="stylesheet" href="style/style.css">
 </head>
 <body>
+    <div class="modalContainer" id="modal">
+        <div class="container" id="modal-conteudo">
+        </div>
+    </div>
     <div>
         <header>
                 <h1 class="logo"><i><<mark>aCODEmia</mark>></i></h1>
@@ -26,11 +30,11 @@
         <main>
             <div class="app">
                 <ul class="navLinks">
-                    <li><input id="buscador-cpf" type="text" placeholder="Digite o CÓDIGO da modalidade"></li>
-                    <li><a id="listar-modalidade" title="listar todos se o campo ao lado estiver vazio">Listar</a></li>
-                    <li><a id="incluir-modalidade">Incluir</a></li>
-                    <li><a id="alterar-modalidade">Alterar</a></li>
-                    <li><a id="excluir-modalidade">Excluir</a></li>
+                    <li><input id="buscador-codigo" type="text" placeholder="Digite o CÓDIGO da modalidade"></li>
+                    <li><a id="listar-modalidade" title="listar todos se o campo ao lado estiver vazio" onclick="abrirPopUp_Modalidades('listar-modalidade');">Listar</a></li>
+                    <li><a id="incluir-modalidade" onclick="abrirPopUp_Modalidades('incluir-modalidade');">Incluir</a></li>
+                    <li><a id="alterar-modalidade" onclick="abrirPopUp_Modalidades('alterar-modalidade');">Alterar</a></li>
+                    <li><a id="excluir-modalidade" onclick="abrirPopUp_Modalidades('excluir-modalidade');">Excluir</a></li>
                 </ul>
             </div>
             <div class="content-table">
@@ -44,8 +48,7 @@
                         <th>Professores responsáveis</th>
                         <th>Valor</th>
                     </thead>
-                    <tbody>
-                    </tbody>
+                    <tbody id="tabela-modalidades"></tbody>
                 </table>
             </div>
         </main>

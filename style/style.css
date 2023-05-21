@@ -314,6 +314,6 @@ table.content-table {
     align-items: center;
 }
 
-.btns button[type=submit] {
+.btns #enviar-aluno {
     background-color: #23252a;
 }
