@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
     <link rel="stylesheet" href="style/style.css">
 </head>
-<body onload="carregarPraticas();listarPraticas();carregarAlunos();carregarModalidades();">
+<body onload="carregarAlunos();carregarModalidades();carregarPraticas();listarPraticas()">
     <div class="modalContainer" id="modal"><div class="container" id="modal-conteudo"></div></div>
     <div>
         <header>
@@ -29,7 +29,7 @@
                 <ul class="navLinks">
                     <li><input oninput="mascaraCPF(this)" id="buscador-cpf" type="text" placeholder="CPF do aluno"></li>
                     <li><input id="buscador-codigo" type="text" placeholder="Código da modalidade"></li>
-                    <li><a id="listar-pratica" title="listar todos se algum dos campos ao lado estiver vazio">Listar</a></li>
+                    <li><a id="listar-pratica" title="listar todos se algum dos campos ao lado estiver vazio" onclick="listarPraticas();">Listar</a></li>
                     <li><a id="incluir-pratica" onclick="incluirPraticaPopUp();">Incluir</a></li>
                     <li><a id="excluir-pratica" onclick="excluirPraticaPopUp();">Excluir</a></li>
                 </ul>
@@ -42,7 +42,7 @@
                         <th>Data</th>
                         <th>Horário</th>
                     </thead>
-                    <tbody>
+                    <tbody id="tabela-praticas">
                     </tbody>
                 </table>
             </div>

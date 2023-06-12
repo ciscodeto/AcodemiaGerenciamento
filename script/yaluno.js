@@ -148,6 +148,7 @@ function excluirAluno(index) {
     console.log(listarAlunos[index])
     listaAlunos.splice(index, 1);
     console.log(listarAlunos[index])
+    excluirPratica(buscarPraticas())
     listarAlunos(-2);
 }
 

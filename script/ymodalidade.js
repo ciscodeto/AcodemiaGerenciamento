@@ -155,6 +155,7 @@ function excluirModalidade(index) {
     console.log(listaModalidades[index])
     listaModalidades.splice(index, 1);
     console.log(listaModalidades[index])
+    excluirPratica(buscarPraticas())
     listarModalidades(-2);
 }
 
