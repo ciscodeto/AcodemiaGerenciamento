@@ -11,6 +11,10 @@ body {
     background-color: #ecf0f1;
     color:#ecf0f1;
     background-image: url(../assets/bugsMuscular.jpg);
+            /*background-color: black;
+            background-image: linear-gradient(to bottom, rgba(0,64,128,1), rgba(0,0,0,1));
+            width: 100%;
+            height: 100vh;*/
     background-size:cover;
     background-position: 0px 50px;
     background-repeat: no-repeat;
@@ -90,8 +94,9 @@ main.menu li:hover {
 .app {
     background-color: #23252a;
     width: auto;
+    max-width: 90vw;
     margin: 10px auto;
-    padding: 10px;
+    padding: 15px;
     border-radius: 2rem;
     filter: drop-shadow(0px 2px 2px rgba(0, 0, 0, 0.5));
 }
@@ -180,7 +185,7 @@ div.content-table {
     user-select: text;
     background-color: #23252a;
     font-size: 0.9em;
-    width: 100%;
+    max-width: 90vw;
     border-radius: 2rem;
     overflow: hidden;
     border:5px solid #23252a;
@@ -254,6 +259,7 @@ table.content-table {
     padding: 20px;
     color: #23252a;
     background-color:#ecf0f1;
+    overflow:auto;
     border-radius: 2em;
     min-width: 450px;
     width: 50%;
@@ -300,6 +306,7 @@ table.content-table {
     cursor: pointer;
     display: flex;
     float: inline-end;
+    text-align: center;
 }
 
 .container a:hover {
@@ -316,4 +323,15 @@ table.content-table {
 
 .btns #enviar-aluno {
     background-color: #23252a;
+}
+
+::-webkit-scrollbar-track {
+    background-color: transparent;
+}
+::-webkit-scrollbar {
+    width: 6px;
+    background: transparent;
+}
+::-webkit-scrollbar-thumb {
+    background: #23252a;
 }

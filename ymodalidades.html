@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>aCODEmia - Modalidades</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="style/style.css">
+</head>
+<body onload="carregarModalidades();listarModalidades();">
+    <div class="modalContainer" id="modal"><div class="container" id="modal-conteudo"></div></div>
+    <div>
+        <header>
+                <h1 class="logo"><i><<mark>aCODEmia</mark>></i></h1>
+            <nav>
+                <ul class="navLinks">
+                    <li><a href="index.html">Menu</a></li>
+                    <li><a href="yalunos.html">Alunos</a></li>
+                    <li><a href="ymodalidades.html" style="color:grey">Modalidades</a></li>
+                    <li><a href="ypraticas.html">Praticas</a></li>
+                    <li><a href="yrelatorios.html">Relatórios</a></li>
+                </ul>
+            </nav>
+            <a class="sair" href="index.html"><button>Sair</button></a>
+        </header>
+        <main>
+            <div class="app">
+                <ul class="navLinks">
+                    <li><input id="buscador-codigo" type="text" placeholder="Digite o CÓDIGO da modalidade"></li>
+                    <li><a id="listar-modalidade" title="listar todos se o campo ao lado estiver vazio" onclick="listarModalidades();">Listar</a></li>
+                    <li><a id="incluir-modalidade" onclick="incluirModalidadePopUp();">Incluir</a></li>
+                    <li><a id="alterar-modalidade" onclick="alterarModalidadePopUp();">Alterar</a></li>
+                    <li><a id="excluir-modalidade" onclick="excluirModalidadePopUp();">Excluir</a></li>
+                </ul>
+            </div>
+            <div class="content-table">
+                <table class="content-table">
+                    <thead>
+                        <th>CÓDIGO</th>
+                        <th>Descrição</th>
+                        <th>Duração</th>
+                        <th>Dias de oferecimento</th>
+                        <th>Horários</th>
+                        <th>Professores responsáveis</th>
+                        <th>Valor</th>
+                    </thead>
+                    <tbody id="tabela-modalidades"></tbody>
+                </table>
+            </div>
+        </main>
+    </div>
+</body>
+<script src="script/main.js"></script>
+<script src="script/ymodalidade.js"></script>
+</html>

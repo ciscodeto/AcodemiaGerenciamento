@@ -4,28 +4,32 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>aCODEmia - Menu</title>
+    <title>aCODEmia - Relatórios</title>
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
     <link rel="stylesheet" href="style/style.css">
 </head>
-<body>
+<body onload="carregarListas()">
     <div>
-        <header class="menu">
-            <h1 class="logo"><i><<mark>aCODEmia</mark>></i></h1>
-            <p><i>Gerencie as aulas e alunos da sua academia com ACODEMIA</i></p>
-        </header>
-        <main class="menu">
+        <header>
+                <h1 class="logo"><i><<mark>aCODEmia</mark>></i></h1>
             <nav>
-                <ul class="menu">
+                <ul class="navLinks">
+                    <li><a href="index.html">Menu</a></li>
                     <li><a href="yalunos.html">Alunos</a></li>
                     <li><a href="ymodalidades.html">Modalidades</a></li>
                     <li><a href="ypraticas.html">Praticas</a></li>
-                    <li><a href="yrelatorios.html">Relatórios</a></li>
-                    <li><a class="sair" href="#">Sair</a></li>
+                    <li><a href="yrelatorios.html" style="color:grey">Relatórios</a></li>
                 </ul>
             </nav>
+            <a class="sair" href="index.html"><button>Sair</button></a>
+        </header>
+        <main class="app">
+            Error 404: Not Found
         </main>
     </div>
 </body>
 <script src="script/main.js"></script>
+<script src="script/ypraticas.js"></script>
+<script src="script/yaluno.js"></script>
+<script src="script/ymodalidade.js"></script>
 </html>
