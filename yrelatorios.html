@@ -8,23 +8,51 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
     <link rel="stylesheet" href="style/style.css">
 </head>
-<body onload="carregarListas()">
+<body onload="carregarRelatorios()">
+    <div class="modalContainer" id="modal"><div class="container" id="modal-conteudo"></div></div>
     <div>
         <header>
-                <h1 class="logo"><i><<mark>aCODEmia</mark>></i></h1>
+            <h1 class="logo"><i><<mark>aCODEmia</mark>></i></h1>
             <nav>
                 <ul class="navLinks">
                     <li><a href="index.html">Menu</a></li>
                     <li><a href="yalunos.html">Alunos</a></li>
                     <li><a href="ymodalidades.html">Modalidades</a></li>
-                    <li><a href="ypraticas.html">Praticas</a></li>
+                    <li><a href="ypraticas.html">Práticas</a></li>
                     <li><a href="yrelatorios.html" style="color:grey">Relatórios</a></li>
                 </ul>
             </nav>
             <a class="sair" href="index.html"><button>Sair</button></a>
         </header>
+        
         <main class="app">
-            Error 404: Not Found
+            <div class="app">
+                <ul class="navLinks">
+                    <li><input id="buscador-cpf" type="text" placeholder="CPF do aluno (opcional)"></li>
+                    <li><input id="buscador-codigo-modalidade" type="text" placeholder="Código da modalidade (opcional)"></li>
+                    <li><a id="filtrar-relatorios" title="Filtrar por critérios" onclick="filtrarRelatorios();">Filtrar</a></li>
+                    <li><a id="listar-todos-relatorios" onclick="listarTodosRelatorios();">Listar Todos</a></li>
+                </ul>
+            </div>
+            
+            <div class="content-table">
+                <table class="content-table">
+                    <thead>
+                        <tr>
+                            <th>Data</th>
+                            <th>CPF do Aluno</th>
+                            <th>Nome do Aluno</th>
+                            <th>Modalidade</th>
+                            <th>Descrição da Prática</th>
+                            <th>Presenças</th>
+                            <th>Faltas</th>
+                        </tr>
+                    </thead>
+                    <tbody id="tabela-relatorios">
+                        <!-- Os dados de relatórios serão inseridos aqui dinamicamente via JavaScript -->
+                    </tbody>
+                </table>
+            </div>
         </main>
     </div>
 </body>
@@ -32,4 +60,5 @@
 <script src="script/ypraticas.js"></script>
 <script src="script/yaluno.js"></script>
 <script src="script/ymodalidade.js"></script>
+<script src="script/yrelatorios.js"></script>
 </html>
